@@ -55,8 +55,8 @@ http {                                                                          
     default_type        application/octet-stream;                                  \n\
     index   index.html index.htm;                                                  \n\
     server {                                                                       \n\
-        listen       80 default_server;                                            \n\
-        listen       [::]:80 default_server;                                       \n\
+        listen       8191;                                                         \n\
+        listen       [::]:8191;                                                    \n\
         server_name  localhost;                                                    \n\
         root         /var/www/html;                                                \n\
         location / {                                                               \n\
@@ -95,8 +95,8 @@ COPY start.sh /opt/app
 # Bundle Python app source
 COPY ethereum.py /opt/app
 
-# Expose port 80
-EXPOSE 80
+# Expose port 8191
+EXPOSE 8191
 
 # Execution rights and set default command
 RUN chmod +x ./start.sh
