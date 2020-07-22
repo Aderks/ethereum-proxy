@@ -29,7 +29,7 @@
   * If Ethereum RPC endpoint is Infura: `docker build --build-arg cores=8 --build-arg url=https://mainnet.infura.io/v3/<api_key> -t ethereum-webserver-test .`
     * Change `--build-arg cores=` to adjust # of processes
 
-* Run etherum-webserver container: `docker run -d --name ethereum-webserver -p 80:80 ethereum-webserver:latest`
+* Run etherum-webserver container: `docker run -d --name ethereum-webserver -p 8191:8191 ethereum-webserver:latest`
   * To change the Ethereum RPC endpoint, add `-e eurl=http://[ip]:[port]` to the Docker run command
   
 * Quick commands:  
@@ -78,7 +78,7 @@
   
 * Run `ethereum.py` to start the Flask Web Server
 
-* cURL example: `curl -H "Accept: application/json" -H "Content-Type: application/json" -d '[]' 127.0.0.1:80/xrs/eth_blockNumber`
+* cURL example: `curl -H "Accept: application/json" -H "Content-Type: application/json" -d '[]' 127.0.0.1:8191/xrs/eth_blockNumber`
 
 ---
 
