@@ -1,8 +1,8 @@
-# ethereum-webserver (Nginx & uWSGI)
+# ethereum-proxy (Nginx & uWSGI)
 
 * For use with Blocknet's XRouter Proxy Container (https://hub.docker.com/r/blocknetdx/xrouterproxy/)
 
-# **Ethereum Web Server running through Blocknet's XRouter Proxy**
+# **Ethereum Proxy running through Blocknet's XRouter Proxy**
 
 ## **Prerequisites**
 
@@ -15,7 +15,7 @@
    * `blocknet.conf` requires `rpcallowip=0.0.0.0/0` or specifying individual subnets if 0.0.0.0/0 is too open
 * Open port 9090 or whichever port is exposed on the XRouter Proxy container
 
-## **Ethereum Web Server Setup**
+## **Ethereum Proxy Setup**
 
 * Download .zip or use Git (https://github.com/Aderks/ethereum-webserver.git)
   * Extract locally
